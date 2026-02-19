@@ -656,7 +656,7 @@
         display: flex;
         justify-content: space-between;
         align-items: start;
-        padding: 4px 45px;
+        padding: 10px 45px;
         /* max-width: 1200px; */
         min-width: 300px;
         margin: -25px;
@@ -871,10 +871,10 @@
             </p>
 
             <div class="gi-buttons">
-              <a href="../9.GetInvolved/Volunteer.html" class="gi-link">
+              <a href="/public/9.GetInvolved/Volunteer.html" class="gi-link">
                 <button class="volunteer-btn">Volunteer</button>
               </a>
-              <a href="../9.GetInvolved/Donate.html" class="gi-link">
+              <a href="/public/9.GetInvolved/Donate.html" class="gi-link">
                 <button class="donate-btn">Donate</button>
               </a>
             </div>
@@ -932,14 +932,14 @@
           <ul>
             <li>
               <a
-                href="2.AlertsRisks/AlertsRisks.html"
+                href="https://safe-haven-gamma.vercel.app/2.AlertsRisks/AlertsRisks.html"
                 style="color: white; text-decoration: none"
                 >Alerts & Risks</a
               >
             </li>
             <li style="text-align: left; margin-top: 10px">
               <a
-                href="5.Community/Community.html"
+                href="https://safe-haven-gamma.vercel.app/5.Community/Community.html"
                 style="color: white; text-decoration: none"
                 >Community</a
               >
@@ -948,7 +948,7 @@
           <ul>
             <li>
               <a
-                href="3.DisasterCoordination/DisasterCoordination.html"
+                href="https://safe-haven-gamma.vercel.app/3.DisasterCoordination/DisasterCoordination.html"
                 style="color: white; text-decoration: none"
                 >Disaster Coordination</a
               >
@@ -956,7 +956,7 @@
 
             <li style="text-align: left; margin-top: 10px">
               <a
-                href="6.DisasterUpdates/DisasterUpdates.html"
+                href="https://safe-haven-gamma.vercel.app/6.DisasterUpdates/DisasterUpdates.html"
                 style="color: white; text-decoration: none"
                 >Disaster Updates</a
               >
@@ -965,14 +965,14 @@
           <ul>
             <li>
               <a
-                href="4.EvacuationSafety/EvacuationSafety.html"
+                href="https://safe-haven-gamma.vercel.app/4.EvacuationSafety/EvacuationSafety.html"
                 style="color: white; text-decoration: none"
                 >Evacuation Safety</a
               >
             </li>
             <li style="text-align: left; margin-top: 10px">
               <a
-                href="7.GetEducated/GetEducated.html"
+                href="https://safe-haven-gamma.vercel.app/7.GetEducated/GetEducated.html"
                 style="color: white; text-decoration: none"
                 >Get Educated</a
               >
@@ -987,6 +987,8 @@
     </footer>
 
     <script>
+      // dynamic year
+      document.getElementById("year").textContent = new Date().getFullYear();
       // TAB SWITCHING FUNCTIONALITY
       document.querySelectorAll(".tab").forEach((tab) => {
         tab.addEventListener("click", function () {
@@ -1109,5 +1111,5 @@
       observer.observe(document.getElementById("map-section"));
     </script>
     <script src="./8.AIAssistant/chatbot.js"></script>
-</body>
-    
+  </body>
+</html>

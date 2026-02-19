@@ -25,8 +25,8 @@
     <style>
       body {
         font-family: Arial, sans-serif;
-        margin: 20px;
-        padding: 20px;
+        /* margin: 20px;
+        padding: 20px; */
         background-color: #f4f4f4;
       }
       .dashboard {
@@ -95,7 +95,81 @@
       a:hover {
         color: #007bff;
       }
+      /* css for footer */
+      .footer {
+        background: #3b5fa3;
+        color: #ffffff;
+        font-family: inherit;
+      }
+      .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        padding: 0px 34px 0px;
+        /* max-width: 1200px; */
+        min-width: 300px;
+        margin: -25px;
+        gap: 40px;
+      }
 
+      .footer-brand {
+        flex: 1;
+      }
+
+      .brand-header {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 5px;
+      }
+
+      .brand-logo {
+        height: 40px;
+        width: 40px;
+        border-radius: 10px;
+        object-fit: cover;
+        background: white;
+        padding: 2px;
+      }
+
+      .brand-name {
+        font-size: 1.2rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+      }
+
+      .barnd-tagline {
+        margin-top: 8px;
+        opacity: 0.85;
+      }
+
+      .brand-mission {
+        opacity: 0.85;
+      }
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 1);
+        text-align: center;
+        padding: 8px;
+        font-size: 0.85rem;
+        opacity: 0.85;
+      }
+
+      .link-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 30px 40px;
+        max-width: 1200px;
+        margin: 14px;
+        gap: 40px;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .footer-container {
+          flex-direction: column;
+        }
+      }
     </style>
   </head>
   <body>
@@ -218,8 +292,8 @@
         <p>Expected to hit Okinawa by weekend.</p>
       </div>
     </div>
-    <br>
-    <br>
+    <br />
+    <br />
     <script>
       async function fetchWeather() {
         const apiKey = "dfe237a4e8c943519ac100729252202";
@@ -262,5 +336,86 @@
       setInterval(updateJapanTime, 1000); // Update time every second
     </script>
     <script src="../8.AIAssistant/chatbot.js"></script>
+    <!-- footer section -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Left section -->
+        <div class="footer-brand">
+          <div class="brand-header">
+            <img
+              src="https://i.pinimg.com/474x/f4/79/4a/f4794a6bc83c46af8a4f287d45dc5f6f.jpg"
+              alt="Safe Heaven logo"
+              class="brand-logo"
+            />
+            <h3 class="brand-name">SAFE HEAVEN</h3>
+          </div>
+          <p style="text-align: left; opacity: 1; margin-top: 6px">
+            Staying informed, prepared and connected when it matters the most.
+            Turning information into action during emergencies.
+          </p>
+        </div>
+
+        <!-- Right section -->
+        <div class="link-container">
+          <ul>
+            <li>
+              <a
+                href="https://safe-haven-gamma.vercel.app/2.AlertsRisks/AlertsRisks.html"
+                style="color: white; text-decoration: none"
+                >Alerts & Risks</a
+              >
+            </li>
+            <li style="text-align: left; margin-top: 10px">
+              <a
+                href="https://safe-haven-gamma.vercel.app/5.Community/Community.html"
+                style="color: white; text-decoration: none"
+                >Community</a
+              >
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a
+                href="https://safe-haven-gamma.vercel.app/3.DisasterCoordination/DisasterCoordination.html"
+                style="color: white; text-decoration: none"
+                >Disaster Coordination</a
+              >
+            </li>
+
+            <li style="text-align: left; margin-top: 10px">
+              <a
+                href="https://safe-haven-gamma.vercel.app/6.DisasterUpdates/DisasterUpdates.html"
+                style="color: white; text-decoration: none"
+                >Disaster Updates</a
+              >
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a
+                href="https://safe-haven-gamma.vercel.app/4.EvacuationSafety/EvacuationSafety.html"
+                style="color: white; text-decoration: none"
+                >Evacuation Safety</a
+              >
+            </li>
+            <li style="text-align: left; margin-top: 10px">
+              <a
+                href="https://safe-haven-gamma.vercel.app/7.GetEducated/GetEducated.html"
+                style="color: white; text-decoration: none"
+                >Get Educated</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © <span id="year"></span> Safe Haven. Built For Community
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
