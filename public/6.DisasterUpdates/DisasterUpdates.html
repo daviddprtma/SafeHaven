@@ -414,7 +414,118 @@
                 padding: 15px;
             }
         }
-      }
+
+        /* css for footer */
+        .footer {
+            background: #3b5fa3;
+            color: #ffffff;
+            font-family: inherit;
+            margin-top: 0px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0px;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 40px;
+        }
+
+        .footer-brand {
+            flex: 0 0 320px;
+        }
+
+        .brand-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        .brand-logo {
+            height: 48px;
+            width: 48px;
+            border-radius: 12px;
+            object-fit: cover;
+            background: white;
+            padding: 3px;
+        }
+
+        .brand-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            opacity: 0.9;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 40px;
+            flex: 1;
+            justify-content: flex-end;
+        }
+
+        .footer-links ul {
+            list-style: disc;
+            padding-left: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links ul li {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .footer-links ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.92rem;
+            transition: opacity 0.2s;
+        }
+
+        .footer-links ul li a:hover {
+            opacity: 0.75;
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.6);
+            text-align: center;
+            padding: 12px;
+            font-size: 0.85rem;
+            opacity: 0.85;
+        }
+
+        /* Responsive footer */
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+                padding: 25px 20px;
+            }
+
+            .footer-brand {
+                flex: none;
+            }
+
+            .brand-header {
+                justify-content: center;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+        }
     </style>
 </head>
 
@@ -444,16 +555,11 @@
             <input type="text" id="searchInput" placeholder="Search by location, disaster type, or keywords...">
         </div>
         <p>
-          <strong
-            ><a
-              href="https://www.ntv.co.jp/englishnews/articles/20214pjzgtycxjly79t1.html"
-              target="_blank"
-              >Typhoon Approaching</a
-            ></strong
-          >
+            <strong><a href="https://www.ntv.co.jp/englishnews/articles/20214pjzgtycxjly79t1.html"
+                    target="_blank">Typhoon Approaching</a></strong>
         </p>
         <p>Expected to hit Okinawa by weekend.</p>
-      </div>
+    </div>
     </div>
 
     <main class="main-container">
@@ -483,7 +589,9 @@
                     <h3 class="card-title"><a
                             href="https://timesofindia.indiatimes.com/city/chandigarh/massive-landslide-strikes-manikaran-barshaini-link-road-in-kullu/articleshow/128759965.cms"
                             target="_blank">Critical Alert: Landslide Risk in Himachal Pradesh Hill Stations</a></h3>
-                    <p class="card-desc">Heavy rainfall has triggered multiple landslides across mountainous terrain. Residents in affected areas have been advised to evacuate immediately and stay alert for further warnings.</p>
+                    <p class="card-desc">Heavy rainfall has triggered multiple landslides across mountainous terrain.
+                        Residents in affected areas have been advised to evacuate immediately and stay alert for further
+                        warnings.</p>
                     <div class="card-footer">
                         <div class="location"><i class="fas fa-map-marker-alt"></i> Himachal Pradesh, India</div>
                         <a href="https://timesofindia.indiatimes.com/city/chandigarh/massive-landslide-strikes-manikaran-barshaini-link-road-in-kullu/articleshow/128759965.cms"
@@ -507,14 +615,15 @@
                         <span><i class="far fa-calendar-alt"></i> Feb 25, 2026</span>
                         <span><i class="far fa-clock"></i> 40m ago</span>
                     </div>
-                    <h3 class="card-title"><a
-                            href="https://www.ndtv.com/search?searchtext=bihar-assam-floods"
+                    <h3 class="card-title"><a href="https://www.ndtv.com/search?searchtext=bihar-assam-floods"
                             target="_blank">Monsoon Alert: Severe Flooding in Bihar and Assam Regions</a></h3>
-                    <p class="card-desc">Unprecedented rainfall has caused widespread flooding across northern India. Local authorities have issued evacuation orders for riverside communities and set up relief camps for displaced residents.</p>
+                    <p class="card-desc">Unprecedented rainfall has caused widespread flooding across northern India.
+                        Local authorities have issued evacuation orders for riverside communities and set up relief
+                        camps for displaced residents.</p>
                     <div class="card-footer">
                         <div class="location"><i class="fas fa-map-marker-alt"></i> Bihar, Assam, India</div>
-                        <a href="https://www.ndtv.com/search?searchtext=bihar-assam-floods"
-                            target="_blank" class="btn-more">Advisory Details <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://www.ndtv.com/search?searchtext=bihar-assam-floods" target="_blank"
+                            class="btn-more">Advisory Details <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </article>
@@ -536,8 +645,11 @@
                     </div>
                     <h3 class="card-title"><a
                             href="https://www.hindustantimes.com/india-news/fire-breaks-out-at-plastic-factory-in-delhis-inderlok-industrial-area-rescue-operations-underway-101771233251997.html"
-                            target="_blank">Critical Containment: Fire Service Response in New Delhi Commercial Area</a></h3>
-                    <p class="card-desc">Fire department teams are actively engaged in firefighting operations at a commercial building. Residents from surrounding areas have been evacuated and relief measures are in place.</p>
+                            target="_blank">Critical Containment: Fire Service Response in New Delhi Commercial Area</a>
+                    </h3>
+                    <p class="card-desc">Fire department teams are actively engaged in firefighting operations at a
+                        commercial building. Residents from surrounding areas have been evacuated and relief measures
+                        are in place.</p>
                     <div class="card-footer">
                         <div class="location"><i class="fas fa-map-marker-alt"></i> New Delhi, India</div>
                         <a href="https://www.hindustantimes.com/india-news/fire-breaks-out-at-plastic-factory-in-delhis-inderlok-industrial-area-rescue-operations-underway-101771233251997.html"
@@ -565,7 +677,8 @@
                     <h3 class="card-title"><a
                             href="https://www.indiatoday.in/earthquake-today/story/earthquake-magnitude-4-7-hits-uttarakhand-joshimath-1851680-2021-09-11?utm_source=global-search&utm_medium=global-search&utm_campaign=global-search"
                             target="_blank">Himalayan Region Alert: Moderate Earthquake Strikes Uttarakhand</a></h3>
-                    <p class="card-desc">A magnitude 5.8 earthquake was detected in the Himalayan region. Structural damage assessments are underway in major towns and cities in the affected area.</p>
+                    <p class="card-desc">A magnitude 5.8 earthquake was detected in the Himalayan region. Structural
+                        damage assessments are underway in major towns and cities in the affected area.</p>
                     <div class="card-footer">
                         <div class="location"><i class="fas fa-map-marker-alt"></i> Uttarakhand, India</div>
                         <a href="https://www.indiatoday.in/earthquake-today/story/earthquake-magnitude-4-7-hits-uttarakhand-joshimath-1851680-2021-09-11?utm_source=global-search&utm_medium=global-search&utm_campaign=global-search"
@@ -592,11 +705,13 @@
                     <h3 class="card-title"><a
                             href="https://timesofindia.indiatimes.com/city/pune/bay-of-bengal-cyclones-may-skim-tamil-nadu-andhra-turn-to-wb-odisha-by-2050/articleshow/126719268.cms"
                             target="_blank">Bay of Bengal Alert: Severe Cyclone Approaching Coastal States</a></h3>
-                    <p class="card-desc">India Meteorological Department forecasts cyclonic conditions with landfall expected within 48 hours. Coastal communities in Odisha, Andhra Pradesh, and Tamil Nadu are advised to prepare for evacuation.</p>
+                    <p class="card-desc">India Meteorological Department forecasts cyclonic conditions with landfall
+                        expected within 48 hours. Coastal communities in Odisha, Andhra Pradesh, and Tamil Nadu are
+                        advised to prepare for evacuation.</p>
                     <div class="card-footer">
                         <div class="location"><i class="fas fa-map-marker-alt"></i> Bay of Bengal Coast, India</div>
-                        <a href="https://timesofindia.indiatimes.com/city/pune/bay-of-bengal-cyclones-may-skim-tamil-nadu-andhra-turn-to-wb-odisha-by-2050/articleshow/126719268.cms" target="_blank"
-                            class="btn-more">Status Map <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://timesofindia.indiatimes.com/city/pune/bay-of-bengal-cyclones-may-skim-tamil-nadu-andhra-turn-to-wb-odisha-by-2050/articleshow/126719268.cms"
+                            target="_blank" class="btn-more">Status Map <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </article>
@@ -619,7 +734,9 @@
                     <h3 class="card-title"><a
                             href="https://www.downtoearth.org.in/wildlife-biodiversity/central-indian-forests-in-khandwa-and-north-betul-at-high-risk-of-fires-study-warns"
                             target="_blank">Forest Crisis: Rapid Wildfire Spread in Central India Regions</a></h3>
-                    <p class="card-desc">Uncontrolled wildfires have spread across forest areas in Madhya Pradesh and Chhattisgarh. Forest department personnel are actively combating the flames with air support anticipated to arrive soon.</p>
+                    <p class="card-desc">Uncontrolled wildfires have spread across forest areas in Madhya Pradesh and
+                        Chhattisgarh. Forest department personnel are actively combating the flames with air support
+                        anticipated to arrive soon.</p>
                     <div class="card-footer">
                         <div class="location"><i class="fas fa-map-marker-alt"></i> Madhya Pradesh, India</div>
                         <a href="https://www.downtoearth.org.in/wildlife-biodiversity/central-indian-forests-in-khandwa-and-north-betul-at-high-risk-of-fires-study-warns"
@@ -630,7 +747,51 @@
         </div>
     </main>
 
+    <!-- footer section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Left: Brand -->
+            <div class="footer-brand">
+                <div class="brand-header">
+                    <img src="https://i.pinimg.com/474x/f4/79/4a/f4794a6bc83c46af8a4f287d45dc5f6f.jpg"
+                        alt="Safe Haven logo" class="brand-logo" />
+                    <h3 class="brand-name">SAFE HAVEN</h3>
+                </div>
+                <p>
+                    Staying informed, prepared and connected when it matters
+                    the most. Turning information into action during emergencies.
+                </p>
+            </div>
+
+            <!-- Right: Navigation Links -->
+            <div class="footer-links">
+                <ul>
+                    <li><a href="/public/2.AlertsRisks/AlertsRisks.html">Alerts &amp; Risks</a></li>
+                    <li><a href="/public/5.Community/Community.html">Community</a></li>
+                </ul>
+                <ul>
+                    <li><a href="/public/3.DisasterCoordination/DisasterCoordination.html">Disaster Coordination</a>
+                    </li>
+                    <li><a href="/public/6.DisasterUpdates/DisasterUpdates.html">Disaster Updates</a></li>
+                </ul>
+                <ul>
+                    <li><a href="/public/4.EvacuationSafety/EvacuationSafety.html">Evacuation Safety</a></li>
+                    <li><a href="/public/7.GetEducated/GetEducated.html">Get Educated</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © <span id="year"></span> Safe Haven. Built For Community
+        </div>
+    </footer>
+
+
+
     <script>
+
+        // dynamic year
+        document.getElementById("year").textContent = new Date().getFullYear();
         // Weather and Time Fetching
         async function fetchLiveInfo() {
             const apiKey = "dfe237a4e8c943519ac100729252202";
